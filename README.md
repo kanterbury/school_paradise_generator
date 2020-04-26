@@ -2,6 +2,7 @@
 好きな芸能人やキャラクターで理想のクラスを作り、席順をランダムに生成することができるWebアプリです。
 
 https://school-paradise-generator.netlify.app/
+![画面キャプチャ](https://github.com/kanterbury/school_paradise_generator/blob/master/snapshot/2020-04-27_01h05_31.png)
 
 ## 主な技術要素
 - React
