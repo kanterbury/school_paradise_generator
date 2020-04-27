@@ -34,7 +34,7 @@ class SeatOrder extends Component {
         let index = i*6 + j;
         colList.push(
           <Col xs={2} sm={2} md={2} lg={2} key={index}>
-            <Seat charaName = {charaList[index]}/>
+            <Seat charaName = {charaList[index]} seatNum={index}/>
           </Col>
         );
       }
