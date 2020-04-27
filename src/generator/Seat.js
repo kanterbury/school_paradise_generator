@@ -4,7 +4,7 @@ class Seat extends Component{
 
   seat = {
     border: "solid 3px #000000",
-    padding: "10px,5px,10px,5px"
+    height: "50px",
   }
 
   render(){

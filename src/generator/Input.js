@@ -51,14 +51,14 @@ class Input extends Component {
       for(let j = 0; j < 3; j++){
         let index = i*3 + j;
         colList.push(
-          <Col xs={12} sm={4} md={4} lg={4}>
+          <Col xs={12} sm={4} md={4} lg={4} key={index}>
             <div style={this.inputForm}>
               {index+1}：<input type="text" name={index} onChange={this.doInputCharaName}/>
             </div>
           </Col>
         );
       }
-      let row = <Row>{colList}</Row>
+      let row = <Row key={i}>{colList}</Row>
       RowList.push(row);
       colList = [];
     }
