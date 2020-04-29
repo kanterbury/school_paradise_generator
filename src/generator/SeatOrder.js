@@ -44,10 +44,12 @@ class SeatOrder extends Component {
     }
     
     return(
-      <div id="seadOrder">
-        <Grid>
-          {RowList}
-        </Grid>
+      <div>
+        <div id="seatOrder">
+          <Grid>
+            {RowList}
+          </Grid>
+        </div>
       </div>
     );
   }
