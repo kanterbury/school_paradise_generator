@@ -86,7 +86,7 @@ class Input extends Component {
         </Form.Group>
         <Form.Group>
           <Form.Label>
-            2. 推しのキャラクターを入力してください。<br />
+            2. クラスメイトを入力してください。<br />
             入力しなかったフォームの数が、あなたが選択できる席の数になります。
           </Form.Label>
           <Grid>
