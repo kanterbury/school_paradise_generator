@@ -27,3 +27,12 @@
   position:absolute;
   right:0;
 }
+
+.seatNumInput {
+  width: min-content;
+  margin: 0 auto;
+}
+
+.nameInput {
+  margin: 2% 0;
+}
