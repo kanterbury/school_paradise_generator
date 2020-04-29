@@ -16,3 +16,14 @@
 .charaName {
   height: 100%;
 }
+
+.base{
+  position:absolute;
+  left:0;
+  visibility:hidden;
+}
+
+.hidden {
+  position:absolute;
+  right:0;
+}
