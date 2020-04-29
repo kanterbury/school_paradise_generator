@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { generateSeatOrder } from './Store';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 import html2canvas from 'html2canvas';
+import Button  from 'react-bootstrap/Button';
 
 class Input extends Component {
 
@@ -89,8 +90,7 @@ class Input extends Component {
         <Grid>
           {RowList}
         </Grid>
-        <button onClick={this.doGenerateSeatOrder}>出力</button>
-        <button onClick={this.doGenerateCanvas}>html2canvas</button>
+        <Button variant="primary" onClick={this.doGenerateSeatOrder}>出力</Button>
       </div>
     );
   }
