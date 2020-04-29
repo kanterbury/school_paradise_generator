@@ -47,7 +47,7 @@ class Input extends Component {
   }
 
   doGenerateCanvas(e){
-    const input = document.getElementById('seadOrder');
+    const input = document.getElementById('seatOrder');
 
     html2canvas(input).then(canvas => {
       document.body.appendChild(canvas)

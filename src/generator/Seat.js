@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Grid, Row, Col} from 'react-flexbox-grid';
 
 class Seat extends Component{
 
@@ -12,7 +13,13 @@ class Seat extends Component{
 
     return(
       <div className="seat">
-        {charaName}
+        <Row className="charaName" middle="xs">
+          <Col xs={12}>
+            <div>
+              {charaName}
+            </div>
+          </Col>
+        </Row>
       </div>
     )
   }
