@@ -7,24 +7,6 @@ class SeatOrder extends Component {
 
   render(){
     let charaList = this.props.charaNameList;
-    // 空要素を削除
-    charaList = charaList.filter(Boolean);
-    // 入力していないフォームの分だけ空文字列を追加
-    for(let i = charaList.length; i < this.props.seatNum; i++){
-      charaList.push("");
-    }
-
-    //配列シャッフル関数
-    const shuffle = ([...array]) => {
-      for (let i = array.length - 1; i >= 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    }
-
-    //キャラリストをシャッフル
-    charaList = shuffle(charaList)
     
     let colList = [];
     let RowList = []; 

@@ -42,7 +42,8 @@ class Input extends Component {
   }
 
   doGenerateSeatOrder(e){
-    e.preventDefault();    
+    e.preventDefault();
+    console.log(this.state.charaNameList);    
     let action = generateSeatOrder(this.state.seatNum, this.state.charaNameList);
     this.props.dispatch(action);
   }
