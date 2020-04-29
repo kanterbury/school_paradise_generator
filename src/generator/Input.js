@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { generateSeatOrder } from './Store';
 import {Grid, Row, Col} from 'react-flexbox-grid';
+import html2canvas from 'html2canvas';
 
 class Input extends Component {
 
@@ -16,6 +17,7 @@ class Input extends Component {
     this.doChangeNumSeat = this.doChangeNumSeat.bind(this);
     this.doInputCharaName = this.doInputCharaName.bind(this);
     this.doGenerateSeatOrder = this.doGenerateSeatOrder.bind(this);
+    this.doGenerateCanvas = this.doGenerateCanvas.bind(this);
   }
 
   inputForm = {
@@ -42,6 +44,14 @@ class Input extends Component {
     e.preventDefault();    
     let action = generateSeatOrder(this.state.seatNum, this.state.charaNameList);
     this.props.dispatch(action);
+  }
+
+  doGenerateCanvas(e){
+    const input = document.getElementById('seadOrder');
+
+    html2canvas(input).then(canvas => {
+      document.body.appendChild(canvas)
+    });
   }
 
   render(){
@@ -80,6 +90,7 @@ class Input extends Component {
           {RowList}
         </Grid>
         <button onClick={this.doGenerateSeatOrder}>出力</button>
+        <button onClick={this.doGenerateCanvas}>html2canvas</button>
       </div>
     );
   }
