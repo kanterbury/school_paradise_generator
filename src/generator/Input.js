@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { generateSeatOrder } from './Store';
-import {Grid, Row, Col} from 'react-flexbox-grid';
+import { Grid, Row, Col} from 'react-flexbox-grid';
 import html2canvas from 'html2canvas';
+import { Button, Form }  from 'react-bootstrap';
 
 class Input extends Component {
 
@@ -59,12 +60,11 @@ class Input extends Component {
     let RowList = [];
     for(let i = 0; i < this.state.seatNum/3; i++){
       for(let j = 0; j < 3; j++){
-        let index = i*3 + j;
+        let index = i*3 + j;        
+        let inputIndex = {index}.index+1 +  "人目";
         colList.push(
           <Col xs={12} sm={4} md={4} lg={4} key={index}>
-            <div style={this.inputForm}>
-              {index+1}：<input type="text" name={index} onChange={this.doInputCharaName}/>
-            </div>
+            <Form.Control className="nameInput" type="text" name={index} placeholder={inputIndex} onChange={this.doInputCharaName} />
           </Col>
         );
       }
@@ -75,22 +75,26 @@ class Input extends Component {
 
     return(
       <div>
-        <p>1. クラスの席数を選択してください：
-        <select name="numOfPeople" defaultValue="24" onChange={this.doChangeNumSeat}>
-          <option value="18">18席</option>
-          <option value="24">24席</option>
-          <option value="30">30席</option>
-          <option value="36">36席</option>
-        </select>
-        </p>
-        <p>2. 推しのキャラクターを入力してください。<br />
-        入力しなかったフォームの数が、あなたが座ることができる席の数になります。
-        </p>
-        <Grid>
-          {RowList}
-        </Grid>
-        <button onClick={this.doGenerateSeatOrder}>出力</button>
-        <button onClick={this.doGenerateCanvas}>html2canvas</button>
+        <Form.Group controlId="exampleForm.ControlSelect1">
+          <Form.Label>1. クラスの席数を選択してください：</Form.Label>
+          <Form.Control className="seatNumInput" as="select" defaultValue="24" onChange={this.doChangeNumSeat}>
+            <option value="18">18席</option>
+            <option value="24">24席</option>
+            <option value="30">30席</option>
+            <option value="36">36席</option>
+          </Form.Control>
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>
+            2. クラスメイトを入力してください。<br />
+            入力しなかったフォームの数が、あなたが選択できる席の数になります。
+          </Form.Label>
+          <Grid>
+            {RowList}
+          </Grid>
+        </Form.Group>
+        3. 好みの席順になるまで、席替えを繰り返しましょう。
+        <Button variant="primary" onClick={this.doGenerateSeatOrder}>席替え</Button>
       </div>
     );
   }

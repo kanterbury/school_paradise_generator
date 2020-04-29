@@ -25,7 +25,6 @@ class SeatOrder extends Component {
 
     //キャラリストをシャッフル
     charaList = shuffle(charaList)
-    console.log(charaList);
     
     let colList = [];
     let RowList = []; 
