@@ -26,8 +26,8 @@ class SeatOrder extends Component {
     
     return(
       <div>
-        <div id="seatOrder">
-          <Grid>
+        <div>
+          <Grid id="seatOrder">
             {RowList}
           </Grid>
         </div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { generateSeatOrder } from './Store';
 import { Grid, Row, Col} from 'react-flexbox-grid';
-import html2canvas from 'html2canvas';
 import { Button, Form }  from 'react-bootstrap';
 
 class Input extends Component {
@@ -18,7 +17,6 @@ class Input extends Component {
     this.doChangeNumSeat = this.doChangeNumSeat.bind(this);
     this.doInputCharaName = this.doInputCharaName.bind(this);
     this.doGenerateSeatOrder = this.doGenerateSeatOrder.bind(this);
-    this.doGenerateCanvas = this.doGenerateCanvas.bind(this);
   }
 
   inputForm = {
@@ -46,14 +44,6 @@ class Input extends Component {
     console.log(this.state.charaNameList);    
     let action = generateSeatOrder(this.state.seatNum, this.state.charaNameList);
     this.props.dispatch(action);
-  }
-
-  doGenerateCanvas(e){
-    const input = document.getElementById('seatOrder');
-
-    html2canvas(input).then(canvas => {
-      document.body.appendChild(canvas)
-    });
   }
 
   render(){

@@ -17,22 +17,15 @@
   height: 100%;
 }
 
-.base{
-  position:absolute;
-  left:0;
-  visibility:hidden;
-}
-
-.hidden {
-  position:absolute;
-  right:0;
-}
-
 .seatNumInput {
   width: min-content;
   margin: 0 auto;
 }
 
 .nameInput {
+  margin: 2% 0;
+}
+
+.footer {
   margin: 2% 0;
 }

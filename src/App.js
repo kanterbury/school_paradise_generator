@@ -4,6 +4,8 @@ import './App.css';
 import Header from './generator/Header';
 import Input from './generator/Input';
 import SeatOrder from './generator/SeatOrder';
+import Download from './generator/Download';
+import Footer from './generator/Footer';
 
 // Appコンポーネント
 class App extends Component {
@@ -18,6 +20,8 @@ class App extends Component {
         <Header />
         <Input />
         <SeatOrder />
+        <Download />
+        <Footer />
       </div>
     );
   }
