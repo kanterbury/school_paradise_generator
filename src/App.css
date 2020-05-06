@@ -4,7 +4,7 @@
 }
 
 .seat {
-  border: solid 3px #000000;
+  border: solid 1px #000000;
   height: 50px;
   font-family: "M PLUS Rounded 1c";
 }
@@ -28,4 +28,28 @@
 
 .footer {
   margin: 2% 0;
+}
+
+.smart_phone_contents {
+  font-size: 65%;
+}
+
+@media screen and (max-width: 676px){
+  #title {
+    font-size: 250%;
+    font-weight: bold;
+  }
+
+  div[class^="col"] {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .nameInput {
+    margin: 1% 0;
+  }
+
+  .charaName{
+    padding: 0 2px;
+  }
 }
