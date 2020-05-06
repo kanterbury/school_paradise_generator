@@ -30,20 +30,21 @@
   margin: 2% 0;
 }
 
-.smart_phone_contents {
-  font-size: 65%;
-}
-
 #title {
   font-weight: bold;
   margin-top: 6px;
 }
 
 #seatOrder {
-  padding-top: 5px;
+  padding-top: 4px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 676px){
+  .App{
+    font-size: 65%;
+  }
+
   #title {
     font-size: 250%;
   }
