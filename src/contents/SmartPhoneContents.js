@@ -8,7 +8,7 @@ import Footer from '../generator/Footer';
 class SmartPhoneContents extends Component{
   render(){
     return(
-      <div>
+      <div className="smart_phone_contents">
         <Header />
         <Input />
         <SeatOrder />
