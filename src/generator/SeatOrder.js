@@ -26,7 +26,7 @@ class SeatOrder extends Component {
 
     
     return(
-      <p>
+      <div>
         <div>
           <Grid id="seatOrder">
             {RowList}
@@ -41,7 +41,7 @@ class SeatOrder extends Component {
             </Row>
           </Grid>
         </div>
-      </p>
+      </div>
     );
   }
 }
