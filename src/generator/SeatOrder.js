@@ -23,15 +23,25 @@ class SeatOrder extends Component {
       RowList.push(row);
       colList = [];
     }
+
     
     return(
-      <div>
+      <p>
         <div>
           <Grid id="seatOrder">
             {RowList}
+            <Row className="seatRow" center="xs" key="kyotaku">
+              <Col xs={4}>
+                <Seat charaName = "教卓" />
+              </Col>
+            </Row>
+            <Row end="xs" key="teikyo">
+              powered by 学園天国ジェネレーター<br />
+              https://school-paradise-generator.netlify.app
+            </Row>
           </Grid>
         </div>
-      </div>
+      </p>
     );
   }
 }

@@ -74,10 +74,13 @@ class Download extends Component {
 
   render(){
     return(
-      <div>
-        4.画像をダウンロードして、Twitterなどでシェアしましょう。<br />
+      <p>
+        4. 生成された座席表を画像としてダウンロードできます。<br />
+        Twitterなどでシェアする際は
+        <a href="https://twitter.com/search?q=%23%E5%AD%A6%E5%9C%92%E5%A4%A9%E5%9B%BD%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC&src=typed_query">#学園天国ジェネレーター</a>
+        をつけてくれると嬉しいです！<br/>
         <Button variant="primary" onClick={this.doAction}>ダウンロード</Button>
-      </div>
+      </p>
     );
   }
 }

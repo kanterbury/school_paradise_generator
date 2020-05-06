@@ -13,7 +13,7 @@ class Seat extends Component{
 
     return(
       <div className="seat">
-        <Row className="charaName" middle="xs">
+        <Row className="charaName" middle="xs" center="xs">
           <Col xs={12}>
             <div>
               {charaName}

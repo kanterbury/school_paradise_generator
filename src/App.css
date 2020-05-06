@@ -34,10 +34,14 @@
   font-size: 65%;
 }
 
+#title {
+  font-weight: bold;
+  margin-top: 6px;
+}
+
 @media screen and (max-width: 676px){
   #title {
     font-size: 250%;
-    font-weight: bold;
   }
 
   div[class^="col"] {
