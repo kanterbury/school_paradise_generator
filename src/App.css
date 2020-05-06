@@ -35,9 +35,18 @@
 }
 
 @media screen and (max-width: 676px){
+  #title {
+    font-size: 250%;
+    font-weight: bold;
+  }
+
   div[class^="col"] {
     padding-left: 4px;
     padding-right: 4px;
+  }
+
+  .nameInput {
+    margin: 1% 0;
   }
 
   .charaName{
