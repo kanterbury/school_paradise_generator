@@ -31,7 +31,7 @@ class Download extends Component {
     // base64データをblobに変換
     var blob = this.Base64toBlob(base64);
     // blobデータをa要素を使ってダウンロード
-    this.saveBlob(blob, "sample.jpg");
+    this.saveBlob(blob, "seatOrder.jpg");
   }
 
   // Base64データをBlobデータに変換
