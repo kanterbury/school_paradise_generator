@@ -9,6 +9,7 @@
   font-family: "M PLUS Rounded 1c";
 }
 
+
 .seatRow {
   margin: 2% 0;
 }
@@ -40,6 +41,11 @@
   margin-bottom: 10px;
 }
 
+.is-empty-seat{
+  font-size: larger;
+  color: lightcoral;
+}
+
 @media screen and (max-width: 676px){
   .App{
     font-size: 65%;
@@ -61,4 +67,5 @@
   .charaName{
     padding: 0 2px;
   }
+  
 }
