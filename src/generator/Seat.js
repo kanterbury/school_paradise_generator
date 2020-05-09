@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Row, Col} from 'react-flexbox-grid';
+import ClassNames from 'classnames';
 
 class Seat extends Component{
 
@@ -11,9 +12,14 @@ class Seat extends Component{
       charaName = this.props.seatNum+1;
     }
 
+    const classNameForSeatRow = ClassNames({
+      "charaName": true,
+      "is-empty-seat" : !(this.props.charaName),
+    });
+
     return(
       <div className="seat">
-        <Row className="charaName" middle="xs" center="xs">
+        <Row className={classNameForSeatRow} middle="xs" center="xs">
           <Col xs={12}>
             <div>
               {charaName}
